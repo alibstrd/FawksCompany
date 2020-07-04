@@ -13,6 +13,12 @@
 		47CF32D824B07E3300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D624B07E3300A35F61 /* Main.storyboard */; };
 		47CF32DA24B07E4700A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 		47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */; };
+		47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EA24B07EB300A35F61 /* AppDelegate.swift */; };
+		47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */; };
+		47CF32EF24B07EB300A35F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* ViewController.swift */; };
+		47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F024B07EB300A35F61 /* Main.storyboard */; };
+		47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */; };
+		47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +30,24 @@
 		47CF32D924B07E4700A35F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CF32DC24B07E4700A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47CF32DE24B07E4700A35F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47CF32E824B07EB300A35F61 /* FawksAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FawksAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47CF32EA24B07EB300A35F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		47CF32EE24B07EB300A35F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47CF32F124B07EB300A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47CF32F624B07EB900A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47CF32F824B07EB900A35F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		47CF32CA24B07E3300A35F61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47CF32E524B07EB300A35F61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +60,9 @@
 		47CF32C424B07E3300A35F61 = {
 			isa = PBXGroup;
 			children = (
+				47CF32FC24B07F3500A35F61 /* Shared */,
 				47CF32CF24B07E3300A35F61 /* FawksCompany */,
+				47CF32E924B07EB300A35F61 /* FawksAdmin */,
 				47CF32CE24B07E3300A35F61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				47CF32CD24B07E3300A35F61 /* FawksCompany.app */,
+				47CF32E824B07EB300A35F61 /* FawksAdmin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,11 +83,31 @@
 				47CF32D224B07E3300A35F61 /* SceneDelegate.swift */,
 				47CF32D424B07E3300A35F61 /* ViewController.swift */,
 				47CF32D624B07E3300A35F61 /* Main.storyboard */,
-				47CF32D924B07E4700A35F61 /* Assets.xcassets */,
 				47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */,
 				47CF32DE24B07E4700A35F61 /* Info.plist */,
 			);
 			path = FawksCompany;
+			sourceTree = "<group>";
+		};
+		47CF32E924B07EB300A35F61 /* FawksAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				47CF32EA24B07EB300A35F61 /* AppDelegate.swift */,
+				47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */,
+				47CF32EE24B07EB300A35F61 /* ViewController.swift */,
+				47CF32F024B07EB300A35F61 /* Main.storyboard */,
+				47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */,
+				47CF32F824B07EB900A35F61 /* Info.plist */,
+			);
+			path = FawksAdmin;
+			sourceTree = "<group>";
+		};
+		47CF32FC24B07F3500A35F61 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				47CF32D924B07E4700A35F61 /* Assets.xcassets */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +130,23 @@
 			productReference = 47CF32CD24B07E3300A35F61 /* FawksCompany.app */;
 			productType = "com.apple.product-type.application";
 		};
+		47CF32E724B07EB300A35F61 /* FawksAdmin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47CF32F924B07EB900A35F61 /* Build configuration list for PBXNativeTarget "FawksAdmin" */;
+			buildPhases = (
+				47CF32E424B07EB300A35F61 /* Sources */,
+				47CF32E524B07EB300A35F61 /* Frameworks */,
+				47CF32E624B07EB300A35F61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FawksAdmin;
+			productName = FawksAdmin;
+			productReference = 47CF32E824B07EB300A35F61 /* FawksAdmin.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +158,9 @@
 				ORGANIZATIONNAME = "Dzulfikar Ali";
 				TargetAttributes = {
 					47CF32CC24B07E3300A35F61 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					47CF32E724B07EB300A35F61 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -116,6 +179,7 @@
 			projectRoot = "";
 			targets = (
 				47CF32CC24B07E3300A35F61 /* FawksCompany */,
+				47CF32E724B07EB300A35F61 /* FawksAdmin */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +195,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47CF32E624B07EB300A35F61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */,
+				47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */,
+				47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,6 +215,16 @@
 				47CF32D524B07E3300A35F61 /* ViewController.swift in Sources */,
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47CF32E424B07EB300A35F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47CF32EF24B07EB300A35F61 /* ViewController.swift in Sources */,
+				47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */,
+				47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +243,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				47CF32DC24B07E4700A35F61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		47CF32F024B07EB300A35F61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47CF32F124B07EB300A35F61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47CF32F624B07EB900A35F61 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,6 +416,42 @@
 			};
 			name = Release;
 		};
+		47CF32FA24B07EB900A35F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR66M47KYF;
+				INFOPLIST_FILE = FawksAdmin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksAdmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47CF32FB24B07EB900A35F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NR66M47KYF;
+				INFOPLIST_FILE = FawksAdmin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksAdmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +469,15 @@
 			buildConfigurations = (
 				47CF32E224B07E4700A35F61 /* Debug */,
 				47CF32E324B07E4700A35F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47CF32F924B07EB900A35F61 /* Build configuration list for PBXNativeTarget "FawksAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47CF32FA24B07EB900A35F61 /* Debug */,
+				47CF32FB24B07EB900A35F61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
