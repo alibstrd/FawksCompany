@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B8875924B3216A008515CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47B8875824B3216A008515CB /* GoogleService-Info.plist */; };
+		47B8876224B340D7008515CB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876124B340D7008515CB /* LoginVC.swift */; };
+		47B8876424B340F4008515CB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876324B340F4008515CB /* RegisterVC.swift */; };
+		47B8876624B34CFB008515CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876524B34CFB008515CB /* Extension.swift */; };
+		47B8876724B34CFB008515CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876524B34CFB008515CB /* Extension.swift */; };
 		47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D024B07E3300A35F61 /* AppDelegate.swift */; };
 		47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D224B07E3300A35F61 /* SceneDelegate.swift */; };
 		47CF32D524B07E3300A35F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D424B07E3300A35F61 /* ViewController.swift */; };
@@ -22,9 +27,17 @@
 		47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */; };
 		47CF330224B0932C00A35F61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47CF330B24B0976000A35F61 /* CustomButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomButtom.swift */; };
+		47CF330D24B22D1C00A35F61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47CF330C24B22D1C00A35F61 /* GoogleService-Info.plist */; };
+		DB96EC075C6607DCC53D5A26 /* Pods_FawksCompany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15B4D00C5FC7795200B3087 /* Pods_FawksCompany.framework */; };
+		F50DB3C9100D289BE7EAC616 /* Pods_FawksAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B8875824B3216A008515CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		47B8876124B340D7008515CB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		47B8876324B340F4008515CB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		47B8876524B34CFB008515CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		47CF32CD24B07E3300A35F61 /* FawksCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FawksCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CF32D024B07E3300A35F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CF32D224B07E3300A35F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +56,12 @@
 		47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		47CF330124B0932C00A35F61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		47CF330A24B0976000A35F61 /* CustomButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtom.swift; sourceTree = "<group>"; };
+		47CF330C24B22D1C00A35F61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADBC5A1EC70EED5130B88BF0 /* Pods-FawksAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FawksAdmin.release.xcconfig"; path = "Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		B15B4D00C5FC7795200B3087 /* Pods_FawksCompany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksCompany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4C063EAFC386815D488526 /* Pods-FawksCompany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FawksCompany.debug.xcconfig"; path = "Target Support Files/Pods-FawksCompany/Pods-FawksCompany.debug.xcconfig"; sourceTree = "<group>"; };
+		E6010DAA1F55704A56F8BC5D /* Pods-FawksCompany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FawksCompany.release.xcconfig"; path = "Target Support Files/Pods-FawksCompany/Pods-FawksCompany.release.xcconfig"; sourceTree = "<group>"; };
+		F74C3B330290A6DFCDEC5EB4 /* Pods-FawksAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FawksAdmin.debug.xcconfig"; path = "Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB96EC075C6607DCC53D5A26 /* Pods_FawksCompany.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +77,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50DB3C9100D289BE7EAC616 /* Pods_FawksAdmin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47B8875A24B33305008515CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47B8875B24B3330C008515CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47B8876124B340D7008515CB /* LoginVC.swift */,
+				47CF32D424B07E3300A35F61 /* ViewController.swift */,
+				47B8876324B340F4008515CB /* RegisterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47B8875C24B33318008515CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				47CF32D624B07E3300A35F61 /* Main.storyboard */,
+				47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */,
+				47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		47B8875D24B3335F008515CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47B8875E24B33364008515CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47B8875F24B33369008515CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47CF32EE24B07EB300A35F61 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47B8876024B33371008515CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				47CF32F024B07EB300A35F61 /* Main.storyboard */,
+				47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		47CF32C424B07E3300A35F61 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +149,8 @@
 				47CF32CF24B07E3300A35F61 /* FawksCompany */,
 				47CF32E924B07EB300A35F61 /* FawksAdmin */,
 				47CF32CE24B07E3300A35F61 /* Products */,
+				4D670A2239CCF9A464B1A58D /* Pods */,
+				CB869F2C96D8830627C937CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,15 +166,14 @@
 		47CF32CF24B07E3300A35F61 /* FawksCompany */ = {
 			isa = PBXGroup;
 			children = (
+				47B8875A24B33305008515CB /* Model */,
 				47CF330324B0936A00A35F61 /* View */,
-				47CF330024B0931900A35F61 /* Utils */,
+				47B8875B24B3330C008515CB /* Controller */,
+				47B8875C24B33318008515CB /* Storyboards */,
 				47CF32D024B07E3300A35F61 /* AppDelegate.swift */,
 				47CF32D224B07E3300A35F61 /* SceneDelegate.swift */,
-				47CF32D424B07E3300A35F61 /* ViewController.swift */,
-				47CF32D624B07E3300A35F61 /* Main.storyboard */,
-				47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */,
 				47CF32DE24B07E4700A35F61 /* Info.plist */,
-				47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */,
+				47CF330C24B22D1C00A35F61 /* GoogleService-Info.plist */,
 			);
 			path = FawksCompany;
 			sourceTree = "<group>";
@@ -101,11 +181,13 @@
 		47CF32E924B07EB300A35F61 /* FawksAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				47B8875D24B3335F008515CB /* Model */,
+				47B8875E24B33364008515CB /* View */,
+				47B8875F24B33369008515CB /* Controller */,
+				47B8876024B33371008515CB /* Storyboards */,
 				47CF32EA24B07EB300A35F61 /* AppDelegate.swift */,
 				47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */,
-				47CF32EE24B07EB300A35F61 /* ViewController.swift */,
-				47CF32F024B07EB300A35F61 /* Main.storyboard */,
-				47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */,
+				47B8875824B3216A008515CB /* GoogleService-Info.plist */,
 				47CF32F824B07EB900A35F61 /* Info.plist */,
 			);
 			path = FawksAdmin;
@@ -114,6 +196,7 @@
 		47CF32FC24B07F3500A35F61 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				47CF330024B0931900A35F61 /* Utils */,
 				47CF32D924B07E4700A35F61 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -123,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				47CF330124B0932C00A35F61 /* Constants.swift */,
+				47B8876524B34CFB008515CB /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -135,6 +219,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4D670A2239CCF9A464B1A58D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F74C3B330290A6DFCDEC5EB4 /* Pods-FawksAdmin.debug.xcconfig */,
+				ADBC5A1EC70EED5130B88BF0 /* Pods-FawksAdmin.release.xcconfig */,
+				DB4C063EAFC386815D488526 /* Pods-FawksCompany.debug.xcconfig */,
+				E6010DAA1F55704A56F8BC5D /* Pods-FawksCompany.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB869F2C96D8830627C937CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */,
+				B15B4D00C5FC7795200B3087 /* Pods_FawksCompany.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47CF32E124B07E4700A35F61 /* Build configuration list for PBXNativeTarget "FawksCompany" */;
 			buildPhases = (
+				9DC898BD976288728D3513E3 /* [CP] Check Pods Manifest.lock */,
 				47CF32C924B07E3300A35F61 /* Sources */,
 				47CF32CA24B07E3300A35F61 /* Frameworks */,
 				47CF32CB24B07E3300A35F61 /* Resources */,
+				A64BAF51463A84A881215E3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47CF32F924B07EB900A35F61 /* Build configuration list for PBXNativeTarget "FawksAdmin" */;
 			buildPhases = (
+				8D545DA17C89E0DF16D61961 /* [CP] Check Pods Manifest.lock */,
 				47CF32E424B07EB300A35F61 /* Sources */,
 				47CF32E524B07EB300A35F61 /* Frameworks */,
 				47CF32E624B07EB300A35F61 /* Resources */,
+				DFE62B4885ABE46B2D3FCB36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +324,7 @@
 			files = (
 				47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */,
 				47CF32DA24B07E4700A35F61 /* Assets.xcassets in Resources */,
+				47CF330D24B22D1C00A35F61 /* GoogleService-Info.plist in Resources */,
 				47CF32D824B07E3300A35F61 /* Main.storyboard in Resources */,
 				47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */,
 			);
@@ -225,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B8875924B3216A008515CB /* GoogleService-Info.plist in Resources */,
 				47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */,
 				47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */,
 				47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */,
@@ -233,6 +343,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D545DA17C89E0DF16D61961 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FawksAdmin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC898BD976288728D3513E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FawksCompany-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A64BAF51463A84A881215E3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FawksCompany/Pods-FawksCompany-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FawksCompany/Pods-FawksCompany-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FawksCompany/Pods-FawksCompany-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFE62B4885ABE46B2D3FCB36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		47CF32C924B07E3300A35F61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -240,9 +431,12 @@
 			files = (
 				47CF32D524B07E3300A35F61 /* ViewController.swift in Sources */,
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
+				47B8876224B340D7008515CB /* LoginVC.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
+				47B8876424B340F4008515CB /* RegisterVC.swift in Sources */,
 				47CF330224B0932C00A35F61 /* Constants.swift in Sources */,
 				47CF330B24B0976000A35F61 /* CustomButtom.swift in Sources */,
+				47B8876624B34CFB008515CB /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +447,7 @@
 				47CF32EF24B07EB300A35F61 /* ViewController.swift in Sources */,
 				47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */,
 				47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */,
+				47B8876724B34CFB008515CB /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,11 +605,13 @@
 		};
 		47CF32E224B07E4700A35F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4C063EAFC386815D488526 /* Pods-FawksCompany.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR66M47KYF;
 				INFOPLIST_FILE = FawksCompany/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,11 +625,13 @@
 		};
 		47CF32E324B07E4700A35F61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6010DAA1F55704A56F8BC5D /* Pods-FawksCompany.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR66M47KYF;
 				INFOPLIST_FILE = FawksCompany/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +645,13 @@
 		};
 		47CF32FA24B07EB900A35F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74C3B330290A6DFCDEC5EB4 /* Pods-FawksAdmin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR66M47KYF;
 				INFOPLIST_FILE = FawksAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,11 +665,13 @@
 		};
 		47CF32FB24B07EB900A35F61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBC5A1EC70EED5130B88BF0 /* Pods-FawksAdmin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR66M47KYF;
 				INFOPLIST_FILE = FawksAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
