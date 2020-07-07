@@ -14,7 +14,7 @@
 		47B8876724B34CFB008515CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876524B34CFB008515CB /* Extension.swift */; };
 		47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D024B07E3300A35F61 /* AppDelegate.swift */; };
 		47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D224B07E3300A35F61 /* SceneDelegate.swift */; };
-		47CF32D524B07E3300A35F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D424B07E3300A35F61 /* ViewController.swift */; };
+		47CF32D524B07E3300A35F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D424B07E3300A35F61 /* HomeVC.swift */; };
 		47CF32D824B07E3300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D624B07E3300A35F61 /* Main.storyboard */; };
 		47CF32DA24B07E4700A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 		47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		47CF32CD24B07E3300A35F61 /* FawksCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FawksCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CF32D024B07E3300A35F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CF32D224B07E3300A35F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47CF32D424B07E3300A35F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47CF32D424B07E3300A35F61 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		47CF32D724B07E3300A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47CF32D924B07E4700A35F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CF32DC24B07E4700A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				47B8876124B340D7008515CB /* LoginVC.swift */,
-				47CF32D424B07E3300A35F61 /* ViewController.swift */,
+				47CF32D424B07E3300A35F61 /* HomeVC.swift */,
 				47B8876324B340F4008515CB /* RegisterVC.swift */,
 			);
 			path = Controller;
@@ -429,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CF32D524B07E3300A35F61 /* ViewController.swift in Sources */,
+				47CF32D524B07E3300A35F61 /* HomeVC.swift in Sources */,
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
 				47B8876224B340D7008515CB /* LoginVC.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
@@ -619,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksCompany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -639,7 +639,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksCompany;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -659,7 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -679,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantom.FawksAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
