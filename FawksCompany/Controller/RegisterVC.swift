@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class RegisterVC: UIViewController {
-
+    
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
@@ -21,7 +21,7 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Changin the matching image state when the pass & confirm match are typing
         // Because UITextField is inhireted from UIControl, it's possible to use the UIControl function for this need
         passwordTxt.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -45,41 +45,45 @@ class RegisterVC: UIViewController {
         
         // When the password match, the image appeared
         if passwordTxt.text == confirmPassTxt.text {
-            passCheckImg.image = UIImage(named: "correct")
-            confirmPassCheckImg.image = UIImage(named: "correct")
+            passCheckImg.image = UIImage(named: AppImages.Correct)
+            confirmPassCheckImg.image = UIImage(named: AppImages.Correct)
         } else {
-            passCheckImg.image = UIImage(named: "close")
-            confirmPassCheckImg.image = UIImage(named: "close")
+            passCheckImg.image = UIImage(named: AppImages.Wrong)
+            confirmPassCheckImg.image = UIImage(named: AppImages.Wrong)
         }
     }
     
     @IBAction func registerButtonPressed(_ sender: CustomButton) {
         guard let username = userNameTxt.text, username.isNotEmpty,
-              let email = emailTxt.text, email.isNotEmpty,
-              let password = passwordTxt.text, password.isNotEmpty,
-              let confirmPassword = passwordTxt.text, confirmPassword.isNotEmpty else { return }
+            let email = emailTxt.text, email.isNotEmpty,
+            let password = passwordTxt.text, password.isNotEmpty,
+            let confirmPassword = passwordTxt.text, confirmPassword.isNotEmpty else { return }
         spinner.startAnimating()
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                self.spinner.stopAnimating()
-                guard let error = error else {
-                    self.emailTxt.text = ""
-                    self.passwordTxt.text = ""
-                    self.userNameTxt.text = ""
-                    self.confirmPassTxt.text = ""
-                    let alert = UIAlertController(title: "Sign up success", message: "You already registered!", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Ok", style: .default) { (action) in
-                        self.navigationController?.popToRootViewController(animated: true)
-                    }
-                    alert.addAction(action)
-                    self.present(alert, animated: true, completion: nil)
-                    
-                    return
-                    
+        
+        guard let authUser = Auth.auth().currentUser else { return }
+        
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        // create user with anonymous user credential (all the data including favorites,etc are collected with the new created user)
+        authUser.link(with: credential) { (result, error) in
+            self.spinner.stopAnimating()
+            guard let error = error else {
+                self.emailTxt.text = ""
+                self.passwordTxt.text = ""
+                self.userNameTxt.text = ""
+                self.confirmPassTxt.text = ""
+                let alert = UIAlertController(title: "Sign up success", message: "You already registered!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default) { (action) in
+                    self.dismiss(animated: true, completion: nil)
                 }
-                print(error.localizedDescription)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+                return
+                
             }
-        
-        
+            print(error.localizedDescription)
+        }
+    
     }
     
 }

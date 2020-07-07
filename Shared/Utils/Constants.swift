@@ -8,3 +8,20 @@
 
 import UIKit
 
+struct Storyboard {
+    static let LoginStoryboard = "LoginStoryboard"
+    static let Main = "Main"
+}
+
+struct StoryboardId {
+    static let LoginVC = "LoginVC"
+    static let RegisterVC = "RegisterVC"
+}
+
+struct AppImages {
+    static let Correct = "correct"
+    static let Wrong = "close"
+}
+
+
+
