@@ -30,7 +30,8 @@ class LoginVC: UIViewController {
           guard let strongSelf = self else { return }
           
             guard error == nil else {
-                print("Failed to sign in")
+                debugPrint(error?.localizedDescription as Any)
+                strongSelf.handleFireAuthError(error: error!)
                 return
             }
             

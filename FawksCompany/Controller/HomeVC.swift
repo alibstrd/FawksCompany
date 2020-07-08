@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
             Auth.auth().signInAnonymously { (result, error) in
                 if let error = error {
                     debugPrint(error.localizedDescription)
+                    self.handleFireAuthError(error: error)
                 }
             }
         }

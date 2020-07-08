@@ -82,6 +82,7 @@ class RegisterVC: UIViewController {
                 
             }
             print(error.localizedDescription)
+            self.handleFireAuthError(error: error)
         }
     
     }
