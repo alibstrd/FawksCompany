@@ -23,5 +23,16 @@ struct AppImages {
     static let Wrong = "close"
 }
 
+struct Identifiers {
+    static let CategoryCell = "CategoryCell"
+}
+
+struct Segue {
+    static let ProductVC = "ToProductVC"
+}
+
+struct AppColors {
+    static let FawksColor = UIColor(named: "FawksColor")!
+}
 
 
