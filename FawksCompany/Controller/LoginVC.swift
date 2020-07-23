@@ -22,7 +22,10 @@ class LoginVC: UIViewController {
 
     @IBAction func loginButtonPressed(_ sender: CustomButton) {
         guard let email = emailTxt.text, email.isNotEmpty,
-            let password = passwordTxt.text, password.isNotEmpty else { return }
+            let password = passwordTxt.text, password.isNotEmpty else {
+                simpleAlert(title: "Error", msg: "Please fill out all fields.")
+                return
+        }
         
         spinner.startAnimating()
         
@@ -31,7 +34,7 @@ class LoginVC: UIViewController {
           
             guard error == nil else {
                 debugPrint(error?.localizedDescription as Any)
-                strongSelf.handleFireAuthError(error: error!)
+                Auth.auth().handleFireAuthError(error: error!, vc: strongSelf)
                 return
             }
             
@@ -44,6 +47,10 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPassButtonPressed(_ sender: UIButton) {
+        let modalVC = ForgotPasswordVC()
+        modalVC.modalPresentationStyle = .overCurrentContext
+        modalVC.modalTransitionStyle = .crossDissolve
+        present(modalVC, animated: true, completion: nil)
     }
     
 }

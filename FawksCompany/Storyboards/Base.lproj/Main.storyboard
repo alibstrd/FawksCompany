@@ -10,12 +10,35 @@
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FawksCompany" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8P2-XR-OKW">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Da3-qR-dfd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="7G9-bl-Rqy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8P2-XR-OKW" secondAttribute="trailing" constant="20" id="Hk9-CF-4Zd"/>
+                            <constraint firstItem="8P2-XR-OKW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lal-2q-W6b"/>
+                            <constraint firstItem="8P2-XR-OKW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oox-AR-XZw"/>
+                            <constraint firstAttribute="bottom" secondItem="8P2-XR-OKW" secondAttribute="bottom" id="vSo-LW-dhr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Bz-jJ-XHq">
@@ -26,11 +49,46 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="8P2-XR-OKW" id="9f9-5v-7Rp"/>
                         <outlet property="loginOutBtn" destination="ju2-b2-uNa" id="Eq1-Pv-SyO"/>
+                        <outlet property="spinner" destination="7G9-bl-Rqy" id="FUc-aY-qyg"/>
+                        <segue destination="yBa-us-Fgw" kind="show" identifier="ToProductVC" id="Zoa-xm-vsI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--ProductVC-->
+        <scene sceneID="OaD-nx-Eni">
+            <objects>
+                <viewController id="yBa-us-Fgw" customClass="ProductVC" customModule="FawksCompany" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvc-CW-ToR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-CY-Cp6">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fEe-CY-Cp6" firstAttribute="top" secondItem="oax-2s-k9x" secondAttribute="top" id="Gsy-3p-AeQ"/>
+                            <constraint firstItem="oax-2s-k9x" firstAttribute="trailing" secondItem="fEe-CY-Cp6" secondAttribute="trailing" constant="20" id="YZm-l3-iHc"/>
+                            <constraint firstItem="fEe-CY-Cp6" firstAttribute="leading" secondItem="oax-2s-k9x" secondAttribute="leading" constant="20" id="iMc-3j-Wvg"/>
+                            <constraint firstAttribute="bottom" secondItem="fEe-CY-Cp6" secondAttribute="bottom" id="qsv-pH-gy3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oax-2s-k9x"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YaJ-LW-UFv"/>
+                    <connections>
+                        <outlet property="tableView" destination="fEe-CY-Cp6" id="McQ-nd-ZMi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9LO-bF-MUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.8695652173915" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HOq-4X-1Ry">

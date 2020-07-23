@@ -57,7 +57,16 @@ class RegisterVC: UIViewController {
         guard let username = userNameTxt.text, username.isNotEmpty,
             let email = emailTxt.text, email.isNotEmpty,
             let password = passwordTxt.text, password.isNotEmpty,
-            let confirmPassword = passwordTxt.text, confirmPassword.isNotEmpty else { return }
+            let confirmPassword = passwordTxt.text, confirmPassword.isNotEmpty else {
+                simpleAlert(title: "Error", msg: "Please fill out all fields.")
+                return
+        }
+        
+        guard let confirmPass = confirmPassTxt.text, confirmPass == confirmPassword else {
+            simpleAlert(title: "Error", msg: "Password does not match!")
+            return
+        }
+        
         spinner.startAnimating()
         
         guard let authUser = Auth.auth().currentUser else { return }
@@ -66,23 +75,14 @@ class RegisterVC: UIViewController {
         // create user with anonymous user credential (all the data including favorites,etc are collected with the new created user)
         authUser.link(with: credential) { (result, error) in
             self.spinner.stopAnimating()
-            guard let error = error else {
-                self.emailTxt.text = ""
-                self.passwordTxt.text = ""
-                self.userNameTxt.text = ""
-                self.confirmPassTxt.text = ""
-                let alert = UIAlertController(title: "Sign up success", message: "You already registered!", preferredStyle: .alert)
-                let action = UIAlertAction(title: "Ok", style: .default) { (action) in
-                    self.dismiss(animated: true, completion: nil)
-                }
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
-                
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                Auth.auth().handleFireAuthError(error: error, vc: self)
                 return
-                
             }
-            print(error.localizedDescription)
-            self.handleFireAuthError(error: error)
+            
+            self.spinner.stopAnimating()
+            self.dismiss(animated: true, completion: nil)
         }
     
     }
