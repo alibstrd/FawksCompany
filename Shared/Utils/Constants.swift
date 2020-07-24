@@ -25,6 +25,7 @@ struct AppImages {
 
 struct Identifiers {
     static let CategoryCell = "CategoryCell"
+    static let ProductCell = "ProductCell"
 }
 
 struct Segue {
@@ -32,7 +33,7 @@ struct Segue {
 }
 
 struct AppColors {
-    static let FawksColor = UIColor(named: "FawksColor")!
+    static let FawksColor = UIColor(named: "FawksColor")
 }
 
 
