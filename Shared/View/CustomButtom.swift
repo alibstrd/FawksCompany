@@ -26,7 +26,7 @@ class RoundedShadowView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 5
-        layer.shadowColor = AppColors.FawksColor.cgColor
+        layer.shadowColor = AppColors.FawksColor?.cgColor
         layer.shadowOpacity = 0.4
         layer.shadowOffset = CGSize.zero
     }
