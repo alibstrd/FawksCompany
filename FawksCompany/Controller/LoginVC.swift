@@ -19,6 +19,15 @@ class LoginVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+      }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBAction func loginButtonPressed(_ sender: CustomButton) {
         guard let email = emailTxt.text, email.isNotEmpty,
@@ -35,6 +44,7 @@ class LoginVC: UIViewController {
             guard error == nil else {
                 debugPrint(error?.localizedDescription as Any)
                 Auth.auth().handleFireAuthError(error: error!, vc: strongSelf)
+                strongSelf.spinner.stopAnimating()
                 return
             }
             

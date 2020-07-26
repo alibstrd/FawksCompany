@@ -23,7 +23,8 @@ class CategoryCell: UICollectionViewCell {
     func configureCell(category: Category) {
         categoryLbl.text = category.name
         if let url = URL(string: category.imgUrl) {
-            categoryImg.kf.setImage(with: url)
+            let options: KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.4))]
+            categoryImg.kf.setImage(with: url, options: options)
         }
     }
     
