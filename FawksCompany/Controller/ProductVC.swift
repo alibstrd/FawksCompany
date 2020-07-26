@@ -13,6 +13,7 @@ class ProductVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var products = [Product]()
+    var category: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()

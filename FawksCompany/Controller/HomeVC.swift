@@ -17,9 +17,24 @@ class HomeVC: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var categories = [Category]()
+    var selectedCategory: Category!
+    var db: Firestore!
+    // to control the listener quota
+    var listener: ListenerRegistration!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
@@ -32,12 +47,12 @@ class HomeVC: UIViewController {
             }
         }
         
-        let category = Category.init(name: "Goods", id: "ahdiijijq", imgUrl: "https://images.unsplash.com/photo-1592500473319-3e242d955811?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", isActive: true, time: Timestamp())
-        categories.append(category)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //fetchDocument()
+        fetchCollection()
+        
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginOutBtn.title = "Logout"
         } else {
@@ -50,6 +65,36 @@ class HomeVC: UIViewController {
         let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.LoginVC)
         present(controller, animated: true, completion: nil)
+    }
+    
+    private func fetchDocument() {
+        let docRef = db.collection("categories").document("ZsLLvAEaB18ho7kJRz6g")
+        
+        // to listen to real time data changes
+        listener = docRef.addSnapshotListener { (snap, error) in
+            guard let data = snap?.data() else { return }
+            // to avoid create multiple documents
+            self.categories.removeAll()
+            let category = Category.init(data: data)
+            self.categories.append(category)
+            self.collectionView.reloadData()
+        }
+    }
+    
+    private func fetchCollection() {
+        let collectionRef = db.collection("categories")
+        
+        // to listen to real time data changes
+        listener = collectionRef.addSnapshotListener { (snap, error) in
+            guard let documents = snap?.documents else { return }
+            self.categories.removeAll()
+            for document in documents {
+                let data = document.data()
+                let category = Category.init(data: data)
+                self.categories.append(category)
+            }
+            self.collectionView.reloadData()
+        }
     }
     
     @IBAction func loginOutBtnPressed(_ sender: UIBarButtonItem) {
@@ -85,6 +130,20 @@ class HomeVC: UIViewController {
 //            presentLoginController()
 //        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.ProductVC {
+            if let destinationVC = segue.destination as? ProductVC {
+                destinationVC.category = selectedCategory
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        listener.remove()
+    }
+    
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -105,6 +164,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let cellWidth = (width - 50) / 2
         let cellHeight = cellWidth * 1.5
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCategory = categories[indexPath.item]
+        performSegue(withIdentifier: Segue.ProductVC, sender: self)
     }
 }
 
