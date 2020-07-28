@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class HomeVC: UIViewController {
-
+    
     @IBOutlet weak var loginOutBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -22,36 +22,40 @@ class HomeVC: UIViewController {
     // to control the listener quota
     var listener: ListenerRegistration!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.barStyle = .black
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
-        if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously { (result, error) in
-                if let error = error {
-                    debugPrint(error.localizedDescription)
-                    Auth.auth().handleFireAuthError(error: error, vc: self)
-                }
-            }
-        }
+        setCollectionView()
+        setupAnonymousUser()
         setCategoriesListener()
-        
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        guard let font = UIFont(name: "futura", size: 26) else { return }
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: font
+        ]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+        spinner.startAnimating()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return (navigationController != nil) ? .lightContent : .darkContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        listener.remove()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        spinner.stopAnimating()
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginOutBtn.title = "Logout"
         } else {
@@ -60,13 +64,80 @@ class HomeVC: UIViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-         super.viewWillDisappear(animated)
-         listener.remove()
-     }
- 
+    private func setupAnonymousUser() {
+        if Auth.auth().currentUser == nil {
+            Auth.auth().signInAnonymously { (result, error) in
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    Auth.auth().handleFireAuthError(error: error, vc: self)
+                }
+            }
+        }
+    }
+    
+    private func setCollectionView() {
+          collectionView.dataSource = self
+          collectionView.delegate = self
+          collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+      }
+    
+    
+    fileprivate func presentLoginController() {
+        let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.LoginVC)
+        present(controller, animated: true, completion: nil)
+    }
+    
+    
+    
+    @IBAction func loginOutBtnPressed(_ sender: UIBarButtonItem) {
+        
+        guard let authUser = Auth.auth().currentUser else { return }
+        
+        if authUser.isAnonymous {
+            presentLoginController()
+        } else {
+            do {
+                try Auth.auth().signOut()
+                //                Auth.auth().signInAnonymously { (result, error) in
+                //                    if let error = error {
+                //                        debugPrint(error.localizedDescription)
+                //                    }
+                //
+                //                }
+                self.presentLoginController()
+            } catch {
+                debugPrint(error.localizedDescription)
+            }
+        }
+        
+        //        if let _ = Auth.auth().currentUser {
+        //            // We are logged in
+        //            do {
+        //                try Auth.auth().signOut()
+        //                presentLoginController()
+        //            } catch {
+        //                debugPrint(error.localizedDescription)
+        //            }
+        //        } else {
+        //            presentLoginController()
+        //        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.ProductVC {
+            if let destinationVC = segue.destination as? ProductVC {
+                destinationVC.category = selectedCategory
+            }
+        }
+    }
+    
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     private func setCategoriesListener() {
-        listener = db.collection("categories").addSnapshotListener({ (snap, error) in
+        listener = db.categoriesQuery.addSnapshotListener({ (snap, error) in
             
             if let error = error {
                 debugPrint(error.localizedDescription)
@@ -97,66 +168,27 @@ class HomeVC: UIViewController {
     }
     
     private func onDocumentModified(change: DocumentChange,category: Category) {
-        
+        // item changed, but remain at the sampe position
+        if change.newIndex == change.oldIndex {
+            let index = Int(change.newIndex)
+            categories.insert(category, at: index)
+            collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+        } else {
+            // item changed, and changed position
+            let newIndex = Int(change.newIndex)
+            let oldIndex = Int(change.oldIndex)
+            categories.remove(at: oldIndex)
+            categories.insert(category, at: newIndex)
+            collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
+        }
     }
     
     private func onDocumentRemoved(change: DocumentChange, category: Category) {
-        
+        let oldIndex = Int(change.oldIndex)
+        categories.remove(at: oldIndex)
+        collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
     }
     
-    fileprivate func presentLoginController() {
-        let storyboard = UIStoryboard(name: Storyboard.LoginStoryboard, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.LoginVC)
-        present(controller, animated: true, completion: nil)
-    }
-    
-
-    
-    @IBAction func loginOutBtnPressed(_ sender: UIBarButtonItem) {
-        
-        guard let authUser = Auth.auth().currentUser else { return }
-        
-        if authUser.isAnonymous {
-            presentLoginController()
-        } else {
-            do {
-                try Auth.auth().signOut()
-//                Auth.auth().signInAnonymously { (result, error) in
-//                    if let error = error {
-//                        debugPrint(error.localizedDescription)
-//                    }
-//
-//                }
-                self.presentLoginController()
-            } catch {
-                debugPrint(error.localizedDescription)
-            }
-        }
-        
-//        if let _ = Auth.auth().currentUser {
-//            // We are logged in
-//            do {
-//                try Auth.auth().signOut()
-//                presentLoginController()
-//            } catch {
-//                debugPrint(error.localizedDescription)
-//            }
-//        } else {
-//            presentLoginController()
-//        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segue.ProductVC {
-            if let destinationVC = segue.destination as? ProductVC {
-                destinationVC.category = selectedCategory
-            }
-        }
-    }
-    
-}
-
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }

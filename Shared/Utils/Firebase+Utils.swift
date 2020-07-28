@@ -8,6 +8,17 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+
+extension Firestore {
+    var categoriesQuery: Query {
+        return collection("categories").order(by: "time", descending: true)
+    }
+    
+    func productQuery(categoryId: String) -> Query {
+        return collection("products").order(by: "time", descending: true).whereField("category", isEqualTo: categoryId)
+    }
+}
 
 extension Auth {
     func handleFireAuthError(error: Error, vc: UIViewController) {

@@ -28,9 +28,10 @@ class ProductCell: UITableViewCell {
     
     func configureCell(product: Product) {
         productTitle.text = product.name
-        if let url = URL(string: product.imageUrl) {
+        if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
         }
+        productPrice.text = String(format: "%0.0f", product.price)
     }
     
     @IBAction func favoriteBtnPressed(_ sender: UIButton) {
