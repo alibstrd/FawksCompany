@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--Fawks Company-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FawksCompany" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="7G9-bl-Rqy">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="7G9-bl-Rqy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,12 +42,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Bz-jJ-XHq">
+                    <navigationItem key="navigationItem" title="Fawks Company" id="9Bz-jJ-XHq">
                         <barButtonItem key="leftBarButtonItem" id="ju2-b2-uNa">
                             <connections>
                                 <action selector="loginOutBtnPressed:" destination="BYZ-38-t0r" id="5LY-nG-2y4"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bar_button_cart" id="WOV-7O-l20"/>
+                            <barButtonItem image="bar_button_star" id="vMd-gm-taw"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="8P2-XR-OKW" id="9f9-5v-7Rp"/>
@@ -113,6 +117,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar_button_cart" width="27" height="24"/>
+        <image name="bar_button_star" width="26" height="26"/>
         <namedColor name="fawksColor">
             <color red="0.99299997091293335" green="0.9660000205039978" blue="0.90499997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
