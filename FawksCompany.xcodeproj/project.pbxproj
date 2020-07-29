@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
+		47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
+		47893B0324D1A8C00021BDA5 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
+		47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */; };
+		47893B0524D1A9210021BDA5 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */; };
+		47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BED6A024D06879001DBE48 /* ProductDetailVC.swift */; };
+		47893B0724D1A9210021BDA5 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47BED6A124D06879001DBE48 /* ProductDetailVC.xib */; };
+		47893B0824D1A9280021BDA5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D424B07E3300A35F61 /* HomeVC.swift */; };
+		47893B0A24D1B3960021BDA5 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */; };
 		479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */; };
 		479FB9CD24C1AFE1007F5712 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */; };
 		479FB9CF24C987D7007F5712 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
@@ -39,13 +48,13 @@
 		47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */; };
 		47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EA24B07EB300A35F61 /* AppDelegate.swift */; };
 		47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */; };
-		47CF32EF24B07EB300A35F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* ViewController.swift */; };
+		47CF32EF24B07EB300A35F61 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */; };
 		47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F024B07EB300A35F61 /* Main.storyboard */; };
 		47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */; };
 		47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 		47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */; };
 		47CF330224B0932C00A35F61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
-		47CF330B24B0976000A35F61 /* CustomButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomButtom.swift */; };
+		47CF330B24B0976000A35F61 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
 		47CF330D24B22D1C00A35F61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47CF330C24B22D1C00A35F61 /* GoogleService-Info.plist */; };
 		DB96EC075C6607DCC53D5A26 /* Pods_FawksCompany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15B4D00C5FC7795200B3087 /* Pods_FawksCompany.framework */; };
 		F50DB3C9100D289BE7EAC616 /* Pods_FawksAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */; };
@@ -53,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
@@ -80,13 +90,13 @@
 		47CF32E824B07EB300A35F61 /* FawksAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FawksAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CF32EA24B07EB300A35F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47CF32EE24B07EB300A35F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeVC.swift; sourceTree = "<group>"; };
 		47CF32F124B07EB300A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47CF32F624B07EB900A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47CF32F824B07EB900A35F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		47CF330124B0932C00A35F61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		47CF330A24B0976000A35F61 /* CustomButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtom.swift; sourceTree = "<group>"; };
+		47CF330A24B0976000A35F61 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		47CF330C24B22D1C00A35F61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADBC5A1EC70EED5130B88BF0 /* Pods-FawksAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FawksAdmin.release.xcconfig"; path = "Target Support Files/Pods-FawksAdmin/Pods-FawksAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		B15B4D00C5FC7795200B3087 /* Pods_FawksCompany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksCompany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +185,8 @@
 		47B8875F24B33369008515CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				47CF32EE24B07EB300A35F61 /* ViewController.swift */,
+				47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */,
+				47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,7 +274,7 @@
 		47CF330324B0936A00A35F61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				47CF330A24B0976000A35F61 /* CustomButtom.swift */,
+				47CF330A24B0976000A35F61 /* CustomViews.swift */,
 				479FB9D324C9982A007F5712 /* CategoryCell.swift */,
 				479FB9E024C9DA8F007F5712 /* ProductCell.swift */,
 			);
@@ -390,7 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				479FB9D824C9982A007F5712 /* CategoryCell.xib in Resources */,
+				47893B0724D1A9210021BDA5 /* ProductDetailVC.xib in Resources */,
 				47B8875924B3216A008515CB /* GoogleService-Info.plist in Resources */,
+				47893B0524D1A9210021BDA5 /* ForgotPasswordVC.xib in Resources */,
 				47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */,
 				479FB9E524C9DA8F007F5712 /* ProductCell.xib in Resources */,
 				47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */,
@@ -495,7 +508,7 @@
 				47B8876424B340F4008515CB /* RegisterVC.swift in Sources */,
 				479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */,
 				47CF330224B0932C00A35F61 /* Constants.swift in Sources */,
-				47CF330B24B0976000A35F61 /* CustomButtom.swift in Sources */,
+				47CF330B24B0976000A35F61 /* CustomViews.swift in Sources */,
 				47B8876624B34CFB008515CB /* Extension.swift in Sources */,
 				479FB9D124C98EAD007F5712 /* Category.swift in Sources */,
 				479FB9E224C9DA8F007F5712 /* ProductCell.swift in Sources */,
@@ -509,15 +522,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47CF32EF24B07EB300A35F61 /* ViewController.swift in Sources */,
+				47CF32EF24B07EB300A35F61 /* AdminHomeVC.swift in Sources */,
 				479FB9DF24C9D60B007F5712 /* Product.swift in Sources */,
 				479FB9DC24C9D52C007F5712 /* ProductVC.swift in Sources */,
 				479FB9D224C98EAD007F5712 /* Category.swift in Sources */,
 				47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */,
+				47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */,
+				47893B0824D1A9280021BDA5 /* HomeVC.swift in Sources */,
 				47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */,
+				47893B0A24D1B3960021BDA5 /* AddEditCategoryVC.swift in Sources */,
 				479FB9E324C9DA8F007F5712 /* ProductCell.swift in Sources */,
+				47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */,
 				47B8876724B34CFB008515CB /* Extension.swift in Sources */,
+				47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */,
 				479FB9D624C9982A007F5712 /* CategoryCell.swift in Sources */,
+				47893B0324D1A8C00021BDA5 /* CustomViews.swift in Sources */,
+				47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

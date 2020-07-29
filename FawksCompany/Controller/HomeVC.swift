@@ -46,7 +46,7 @@ class HomeVC: UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return (navigationController != nil) ? .lightContent : .darkContent
+        return .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {
