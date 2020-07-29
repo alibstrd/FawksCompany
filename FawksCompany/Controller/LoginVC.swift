@@ -29,7 +29,7 @@ class LoginVC: UIViewController {
         return .lightContent
     }
 
-    @IBAction func loginButtonPressed(_ sender: CustomButton) {
+    @IBAction func loginButtonPressed(_ sender: Any) {
         guard let email = emailTxt.text, email.isNotEmpty,
             let password = passwordTxt.text, password.isNotEmpty else {
                 simpleAlert(title: "Error", msg: "Please fill out all fields.")
@@ -53,7 +53,7 @@ class LoginVC: UIViewController {
         }
     }
     
-    @IBAction func anonymousButtonPressed(_ sender: CustomButton) {
+    @IBAction func anonymousButtonPressed(_ sender: Any) {
     }
     
     @IBAction func forgotPassButtonPressed(_ sender: UIButton) {

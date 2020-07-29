@@ -31,3 +31,13 @@ class RoundedShadowView: UIView {
         layer.shadowOffset = CGSize.zero
     }
 }
+
+class RoundedShadowButton: UIButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 15
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowOffset = .zero
+    }
+}

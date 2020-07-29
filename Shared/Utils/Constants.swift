@@ -30,6 +30,7 @@ struct Identifiers {
 
 struct Segue {
     static let ProductVC = "ToProductVC"
+    static let ToAddEditCategory = "ToAddEditCategory"
 }
 
 struct AppColors {

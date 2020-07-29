@@ -111,6 +111,8 @@ extension ProductVC: UITableViewDelegate, UITableViewDataSource {
         productDetailVC.product = selectedProduct
         productDetailVC.modalTransitionStyle = .crossDissolve
         productDetailVC.modalPresentationStyle = .overCurrentContext
-        present(productDetailVC, animated: true, completion: nil)
+        UIView.animate(withDuration: 0.2) {
+            self.present(productDetailVC, animated: true, completion: nil)
+        }
     }
 }

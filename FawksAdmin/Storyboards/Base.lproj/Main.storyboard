@@ -1,39 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ucm-Cp-1wd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Fawks Admin-->
+        <scene sceneID="Tti-vl-Qlz">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="FawksAdmin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="8S6-Y0-uBR" customClass="AdminHomeVC" customModule="FawksAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ehq-x5-5dU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fawks" translatesAutoresizingMaskIntoConstraints="NO" id="ZFV-7k-XxV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-VP-aYd">
+                                <rect key="frame" x="10" y="88" width="394" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GBd-qo-dMR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="6" minY="10" maxX="6" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="iZA-lK-vok">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZFV-7k-XxV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="29C-g0-kiA"/>
-                            <constraint firstItem="ZFV-7k-XxV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gTf-Am-EpN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZFV-7k-XxV" secondAttribute="trailing" id="hSF-L6-2PO"/>
-                            <constraint firstAttribute="bottom" secondItem="ZFV-7k-XxV" secondAttribute="bottom" id="zrK-Kg-TjO"/>
+                            <constraint firstItem="PdS-zZ-aIB" firstAttribute="trailing" secondItem="9vh-VP-aYd" secondAttribute="trailing" constant="10" id="IYN-qA-vOD"/>
+                            <constraint firstItem="9vh-VP-aYd" firstAttribute="top" secondItem="PdS-zZ-aIB" secondAttribute="top" id="XU9-yM-2Fv"/>
+                            <constraint firstItem="9vh-VP-aYd" firstAttribute="leading" secondItem="PdS-zZ-aIB" secondAttribute="leading" constant="10" id="dJD-h9-Sjz"/>
+                            <constraint firstAttribute="bottom" secondItem="9vh-VP-aYd" secondAttribute="bottom" id="nzL-G8-BtS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="PdS-zZ-aIB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Fawks Admin" id="eLY-hC-bCM">
+                        <barButtonItem key="leftBarButtonItem" id="2Ia-UV-xgS">
+                            <connections>
+                                <action selector="loginOutBtnPressed:" destination="8S6-Y0-uBR" id="hX1-hL-XJT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="9vh-VP-aYd" id="ezI-SV-H6x"/>
+                        <outlet property="loginOutBtn" destination="2Ia-UV-xgS" id="E5c-Xa-PwU"/>
+                        <outlet property="spinner" destination="iZA-lK-vok" id="9TD-xJ-Hhy"/>
+                        <segue destination="5ja-9K-td6" kind="show" identifier="ToAddEditCategory" id="Gez-jN-uf1"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci4-2x-Qkg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="102"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
+        </scene>
+        <!--Add Edit CategoryVC-->
+        <scene sceneID="NKy-Hy-y4j">
+            <objects>
+                <viewController id="5ja-9K-td6" customClass="AddEditCategoryVC" customModule="FawksAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cb0-78-YFq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="e8e-5w-WXf">
+                                <rect key="frame" x="20" y="108" width="374" height="143"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-nP-Gy6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-6D-eKo">
+                                        <rect key="frame" x="0.0" y="51.5" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0xo-B4-Qdk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap image to add category image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyT-Se-f4h">
+                                        <rect key="frame" x="0.0" y="120.5" width="374" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="mDV-Ph-AvV">
+                                <rect key="frame" x="107" y="321" width="200" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hIQ-ql-Bpy"/>
+                                    <constraint firstAttribute="height" constant="250" id="rF4-d4-oBg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw5-KV-mQf" customClass="RoundedShadowButton" customModule="FawksAdmin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="772" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xZk-e1-BED"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Add Category">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCategory:" destination="5ja-9K-td6" eventType="touchUpInside" id="r4m-xO-o4B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e8e-5w-WXf" firstAttribute="top" secondItem="D7W-Ad-Acs" secondAttribute="top" constant="20" id="0NS-PW-gUj"/>
+                            <constraint firstItem="D7W-Ad-Acs" firstAttribute="trailing" secondItem="Dw5-KV-mQf" secondAttribute="trailing" constant="20" id="7Gy-TW-Bne"/>
+                            <constraint firstItem="D7W-Ad-Acs" firstAttribute="trailing" secondItem="e8e-5w-WXf" secondAttribute="trailing" constant="20" id="A8R-Qv-K28"/>
+                            <constraint firstItem="mDV-Ph-AvV" firstAttribute="centerX" secondItem="Cb0-78-YFq" secondAttribute="centerX" id="OQA-XH-X2n"/>
+                            <constraint firstItem="D7W-Ad-Acs" firstAttribute="bottom" secondItem="Dw5-KV-mQf" secondAttribute="bottom" constant="40" id="e9x-53-BFr"/>
+                            <constraint firstItem="mDV-Ph-AvV" firstAttribute="top" secondItem="e8e-5w-WXf" secondAttribute="bottom" constant="70" id="lJP-JD-63g"/>
+                            <constraint firstItem="e8e-5w-WXf" firstAttribute="leading" secondItem="D7W-Ad-Acs" secondAttribute="leading" constant="20" id="xZy-96-g7S"/>
+                            <constraint firstItem="Dw5-KV-mQf" firstAttribute="leading" secondItem="D7W-Ad-Acs" secondAttribute="leading" constant="20" id="zUH-6W-318"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D7W-Ad-Acs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bfL-cf-T2I"/>
+                    <connections>
+                        <outlet property="categoryImg" destination="mDV-Ph-AvV" id="cQP-se-BtS"/>
+                        <outlet property="nameTxt" destination="pFr-6D-eKo" id="BfP-ms-edQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXQ-5V-fw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bQx-4b-6TN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ucm-Cp-1wd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S3P-dR-SJ0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8S6-Y0-uBR" kind="relationship" relationship="rootViewController" id="Lhw-5c-xWk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f99-YL-C8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fawks" width="750" height="1334"/>
+        <image name="camera" width="66" height="54"/>
     </resources>
 </document>
