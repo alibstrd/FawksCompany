@@ -114,6 +114,10 @@
                                     <action selector="addCategory:" destination="5ja-9K-td6" eventType="touchUpInside" id="r4m-xO-o4B"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Scv-CE-1vn">
+                                <rect key="frame" x="188.5" y="616" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -123,7 +127,9 @@
                             <constraint firstItem="mDV-Ph-AvV" firstAttribute="centerX" secondItem="Cb0-78-YFq" secondAttribute="centerX" id="OQA-XH-X2n"/>
                             <constraint firstItem="D7W-Ad-Acs" firstAttribute="bottom" secondItem="Dw5-KV-mQf" secondAttribute="bottom" constant="40" id="e9x-53-BFr"/>
                             <constraint firstItem="mDV-Ph-AvV" firstAttribute="top" secondItem="e8e-5w-WXf" secondAttribute="bottom" constant="70" id="lJP-JD-63g"/>
+                            <constraint firstItem="Scv-CE-1vn" firstAttribute="centerX" secondItem="Cb0-78-YFq" secondAttribute="centerX" id="mDr-6B-WcC"/>
                             <constraint firstItem="e8e-5w-WXf" firstAttribute="leading" secondItem="D7W-Ad-Acs" secondAttribute="leading" constant="20" id="xZy-96-g7S"/>
+                            <constraint firstItem="Scv-CE-1vn" firstAttribute="top" secondItem="mDV-Ph-AvV" secondAttribute="bottom" constant="45" id="yuH-g8-ubh"/>
                             <constraint firstItem="Dw5-KV-mQf" firstAttribute="leading" secondItem="D7W-Ad-Acs" secondAttribute="leading" constant="20" id="zUH-6W-318"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D7W-Ad-Acs"/>
@@ -132,6 +138,7 @@
                     <connections>
                         <outlet property="categoryImg" destination="mDV-Ph-AvV" id="cQP-se-BtS"/>
                         <outlet property="nameTxt" destination="pFr-6D-eKo" id="BfP-ms-edQ"/>
+                        <outlet property="spinner" destination="Scv-CE-1vn" id="lbf-gf-Vqh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXQ-5V-fw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

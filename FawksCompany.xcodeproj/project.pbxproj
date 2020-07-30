@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475C8CB924D322590024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
+		475C8CBA24D3225A0024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
+		475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */; };
 		47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
 		47893B0324D1A8C00021BDA5 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
@@ -44,14 +47,12 @@
 		47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D224B07E3300A35F61 /* SceneDelegate.swift */; };
 		47CF32D524B07E3300A35F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32D424B07E3300A35F61 /* HomeVC.swift */; };
 		47CF32D824B07E3300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D624B07E3300A35F61 /* Main.storyboard */; };
-		47CF32DA24B07E4700A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 		47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32DB24B07E4700A35F61 /* LaunchScreen.storyboard */; };
 		47CF32EB24B07EB300A35F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EA24B07EB300A35F61 /* AppDelegate.swift */; };
 		47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EC24B07EB300A35F61 /* SceneDelegate.swift */; };
 		47CF32EF24B07EB300A35F61 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */; };
 		47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F024B07EB300A35F61 /* Main.storyboard */; };
 		47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32F524B07EB900A35F61 /* LaunchScreen.storyboard */; };
-		47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32D924B07E4700A35F61 /* Assets.xcassets */; };
 		47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CF32FE24B0900300A35F61 /* LoginStoryboard.storyboard */; };
 		47CF330224B0932C00A35F61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47CF330B24B0976000A35F61 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		475C8CB824D322450024F108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 		47CF32D224B07E3300A35F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47CF32D424B07E3300A35F61 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		47CF32D724B07E3300A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		47CF32D924B07E4700A35F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CF32DC24B07E4700A35F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47CF32DE24B07E4700A35F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47CF32E824B07EB300A35F61 /* FawksAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FawksAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				47CF32FC24B07F3500A35F61 /* Shared */,
-				47CF32D924B07E4700A35F61 /* Assets.xcassets */,
 				47CF32CF24B07E3300A35F61 /* FawksCompany */,
 				47CF32E924B07EB300A35F61 /* FawksAdmin */,
 				47CF32CE24B07E3300A35F61 /* Products */,
@@ -257,6 +257,7 @@
 				47CF330324B0936A00A35F61 /* View */,
 				47CF330024B0931900A35F61 /* Utils */,
 				47B8875A24B33305008515CB /* Model */,
+				475C8CB824D322450024F108 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -387,11 +388,11 @@
 				47CF32DD24B07E4700A35F61 /* LaunchScreen.storyboard in Resources */,
 				479FB9E424C9DA8F007F5712 /* ProductCell.xib in Resources */,
 				479FB9D724C9982A007F5712 /* CategoryCell.xib in Resources */,
-				47CF32DA24B07E4700A35F61 /* Assets.xcassets in Resources */,
 				47CF330D24B22D1C00A35F61 /* GoogleService-Info.plist in Resources */,
 				47CF32D824B07E3300A35F61 /* Main.storyboard in Resources */,
 				47BED6A324D06879001DBE48 /* ProductDetailVC.xib in Resources */,
 				479FB9CD24C1AFE1007F5712 /* ForgotPasswordVC.xib in Resources */,
+				475C8CB924D322590024F108 /* Assets.xcassets in Resources */,
 				47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +407,7 @@
 				47893B0524D1A9210021BDA5 /* ForgotPasswordVC.xib in Resources */,
 				47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */,
 				479FB9E524C9DA8F007F5712 /* ProductCell.xib in Resources */,
-				47CF32FD24B07F4000A35F61 /* Assets.xcassets in Resources */,
+				475C8CBA24D3225A0024F108 /* Assets.xcassets in Resources */,
 				47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +506,7 @@
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
 				47B8876224B340D7008515CB /* LoginVC.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
+				475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */,
 				47B8876424B340F4008515CB /* RegisterVC.swift in Sources */,
 				479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */,
 				47CF330224B0932C00A35F61 /* Constants.swift in Sources */,
