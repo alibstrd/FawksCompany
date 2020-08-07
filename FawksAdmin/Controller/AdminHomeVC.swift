@@ -11,33 +11,25 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class AdminHomeVC: HomeVC {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupBarButton()
+
         setupNavigationBar()
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        let categoryBtn = UIBarButtonItem(title: "Add Category", style: .plain, target: self, action: #selector(addCategory))
+        navigationItem.setRightBarButton(categoryBtn, animated: true)
     }
     
-    private func setupBarButton(){
-        navigationController?.navigationItem.leftBarButtonItem?.isEnabled = false
-        
-        let rightBar = UIBarButtonItem(title: "Add Category", style: .plain, target: self, action: #selector(addCategory))
-        navigationItem.rightBarButtonItem = rightBar
-    }
-    
-    @objc func addCategory(){
+    @objc func addCategory() {
         performSegue(withIdentifier: Segue.ToAddEditCategory, sender: self)
     }
     
     private func setupNavigationBar() {
-           guard let font = UIFont(name: "futura", size: 18) else { return }
-           navigationController?.navigationBar.titleTextAttributes = [
-               NSAttributedString.Key.foregroundColor: UIColor.white,
-               NSAttributedString.Key.font: font
-           ]
-       }
-
-
+        guard let font = UIFont(name: "futura", size: 18) else { return }
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: font
+        ]
+    }
 }
-
