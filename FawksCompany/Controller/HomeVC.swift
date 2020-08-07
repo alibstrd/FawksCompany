@@ -75,7 +75,7 @@ class HomeVC: UIViewController {
         }
     }
     
-    private func setCollectionView() {
+    func setCollectionView() {
           collectionView.dataSource = self
           collectionView.delegate = self
           collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
@@ -137,29 +137,29 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private func setCategoriesListener() {
-        listener = db.categoriesQuery.addSnapshotListener({ (snap, error) in
-            
-            if let error = error {
-                debugPrint(error.localizedDescription)
-                return
-            }
-            
-            snap?.documentChanges.forEach({ (change) in
-                
-                let data = change.document.data()
-                let category = Category.init(data: data)
-                
-                switch change.type {
-                case .added:
-                    self.onDocumentAdded(change: change, category: category)
-                case .modified:
-                    self.onDocumentModified(change: change, category: category)
-                case .removed:
-                    self.onDocumentRemoved(change: change, category: category)
-                }
-            })
-        })
-    }
+           listener = db.categoriesQuery.addSnapshotListener({ (snap, error) in
+               
+               if let error = error {
+                   debugPrint(error.localizedDescription)
+                   return
+               }
+               
+               snap?.documentChanges.forEach({ (change) in
+                   
+                   let data = change.document.data()
+                   let category = Category.init(data: data)
+                   
+                   switch change.type {
+                   case .added:
+                       self.onDocumentAdded(change: change, category: category)
+                   case .modified:
+                       self.onDocumentModified(change: change, category: category)
+                   case .removed:
+                       self.onDocumentRemoved(change: change, category: category)
+                   }
+               })
+           })
+       }
     
     private func onDocumentAdded(change: DocumentChange, category: Category) {
         let newIndex = Int(change.newIndex)

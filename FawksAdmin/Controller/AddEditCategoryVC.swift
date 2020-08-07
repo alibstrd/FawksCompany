@@ -15,10 +15,25 @@ class AddEditCategoryVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var categoryImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var editBtn:  UIButton!
+    
+    var categoryToEdit: Category!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tappingImg()
+        // if we are editing, categoryToEdit will != nil
+        if let category = categoryToEdit {
+            nameTxt.text = category.name
+            
+            editBtn.setTitle("Save Changes", for: .normal)
+            
+            if let url = URL(string: category.imgUrl) {
+                categoryImg.contentMode = .scaleAspectFill
+                categoryImg.kf.setImage(with: url)
+            }
+        }
     }
     
     @IBAction func addCategory(_ sender: Any) {
@@ -45,7 +60,7 @@ class AddEditCategoryVC: UIViewController, UINavigationControllerDelegate {
         }
         
         // 1. Turn image into Data
-        guard let imageData = image.jpegData(compressionQuality: 1) else { return }
+        guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
         
         // 2. Create an image storage reference -> A location in firestorage for it to be stored
         let imageRef = Storage.storage().reference().child("/categoryImages/\(categoryName).jpg")
@@ -82,10 +97,22 @@ class AddEditCategoryVC: UIViewController, UINavigationControllerDelegate {
     
     private func uploadDocument(url: String) {
         var docRef: DocumentReference!
-        docRef = Firestore.firestore().collection("categories").document()
-        let category = Category.init(name: nameTxt.text!, id: docRef.documentID, imgUrl: url, time: Timestamp())
+        var category = Category.init(name: nameTxt.text!,
+                                     id: "",
+                                     imgUrl: url,
+                                     time: Timestamp())
         
-        // because firestore need data of type -> [String:Any], we have to convert category above the the that type
+        if let categoryToEdit = categoryToEdit {
+            // Editing category
+            docRef = Firestore.firestore().collection("categories").document(categoryToEdit.id)
+            category.id = categoryToEdit.id
+        } else {
+            // Add new category
+            docRef = Firestore.firestore().collection("categories").document()
+            category.id = docRef.documentID
+        }
+        
+        // because firestore need data of type -> [String:Any], we have to convert category above to the that type
         let data = Category.modelToData(category: category)
         docRef.setData(data, merge: true) { (error) in
             if let error = error {
