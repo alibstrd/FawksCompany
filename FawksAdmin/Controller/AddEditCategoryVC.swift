@@ -37,7 +37,7 @@ class AddEditCategoryVC: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func addCategory(_ sender: Any) {
-        uploadImageTheDocument()
+        uploadImageThenDocument()
         spinner.startAnimating()
     }
     
@@ -52,7 +52,7 @@ class AddEditCategoryVC: UIViewController, UINavigationControllerDelegate {
         launchImgPicker()
     }
     
-    private func uploadImageTheDocument(){
+    private func uploadImageThenDocument(){
         guard let image = categoryImg.image,
             let categoryName = nameTxt.text, categoryName.isNotEmpty else {
                 simpleAlert(title: "Error", msg: "Please fill out the empty field")
