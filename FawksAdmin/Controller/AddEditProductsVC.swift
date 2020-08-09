@@ -41,7 +41,7 @@ class AddEditProductsVC: UIViewController {
     }
     
     @IBAction func addProductBtnPressed(_ sender: Any) {
-        
+        uploadImageThenDocument()
     }
     
     private func tappingImg(){
@@ -55,14 +55,17 @@ class AddEditProductsVC: UIViewController {
         launchImgPicker()
     }
     
-    private func uploadImageDocument() {
+    private func uploadImageThenDocument() {
         guard let image = productImgView.image,
             let productName = productNameTxt.text, productName.isNotEmpty,
             let productDesc = productDescTxt.text, productDesc.isNotEmpty,
-            let priceInDouble = Double(productDesc) else {
+            let priceString = productPriceTxt.text,
+            let priceInDouble = Double(priceString) else {
                 simpleAlert(title: "Error", msg: "Please fill out the empty fields")
                 return
         }
+        
+        spinner.startAnimating()
         
         // 1. Turn image into Data
         guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
@@ -97,7 +100,7 @@ class AddEditProductsVC: UIViewController {
     
     private func uploadDocument(url: String, price: Double) {
         var docRef: DocumentReference!
-        var product = Product.init(name: productNameTxt.text!, id: "", category: selectedCategory.name, price: price, productDescription: productDescTxt.text, imgUrl: url, time: Timestamp(), stock: 2)
+        var product = Product.init(name: productNameTxt.text!, id: "", category: selectedCategory.id, price: price, productDescription: productDescTxt.text, imgUrl: url, time: Timestamp(), stock: 2)
         
         if let productToEdit = productToEdit {
             // Editing product

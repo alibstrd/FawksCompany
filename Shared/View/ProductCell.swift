@@ -31,7 +31,11 @@ class ProductCell: UITableViewCell {
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
         }
-        productPrice.text = String(format: "%0.0f", product.price)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .none
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = "Rp. \(price)"
+        }
     }
     
     @IBAction func favoriteBtnPressed(_ sender: UIButton) {
