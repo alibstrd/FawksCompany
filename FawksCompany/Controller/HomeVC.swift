@@ -32,7 +32,7 @@ class HomeVC: UIViewController {
     }
     
     private func setupNavigationBar() {
-        guard let font = UIFont(name: "futura", size: 26) else { return }
+        guard let font = UIFont(name: "futura", size: 20) else { return }
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: font
@@ -58,6 +58,9 @@ class HomeVC: UIViewController {
         spinner.stopAnimating()
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginOutBtn.title = "Logout"
+            if UserService.userListener == nil {
+                UserService.getCurrentUser()
+            }
         } else {
             loginOutBtn.title = "Login"
         }
@@ -98,6 +101,7 @@ class HomeVC: UIViewController {
             presentLoginController()
         } else {
             do {
+                UserService.logoutUser()
                 try Auth.auth().signOut()
                 //                Auth.auth().signInAnonymously { (result, error) in
                 //                    if let error = error {
@@ -129,8 +133,18 @@ class HomeVC: UIViewController {
             if let destinationVC = segue.destination as? ProductVC {
                 destinationVC.category = selectedCategory
             }
+        } else if segue.identifier == Segue.ToFavorites {
+            if let destinationVC = segue.destination as? ProductVC {
+                destinationVC.category = selectedCategory
+                destinationVC.showFavorites = true
+            }
         }
     }
+    
+    @IBAction func favoritesBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: Segue.ToFavorites, sender: self)
+    }
+    
     
 }
 

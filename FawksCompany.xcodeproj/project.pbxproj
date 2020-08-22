@@ -14,6 +14,11 @@
 		475C8CBE24DCF8B20024F108 /* AdminProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */; };
 		475C8CC024DD02580024F108 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */; };
 		475C8CC224DD675E0024F108 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
+		475C8CC424EFAFE10024F108 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC324EFAFE10024F108 /* User.swift */; };
+		475C8CC524EFBCA80024F108 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC324EFAFE10024F108 /* User.swift */; };
+		475C8CC624EFBE8C0024F108 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */; };
+		475C8CC724EFBE8F0024F108 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */; };
+		475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC924EFD9BC0024F108 /* UserService.swift */; };
 		47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
 		47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */; };
@@ -69,6 +74,8 @@
 		475C8CB824D322450024F108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductVC.swift; sourceTree = "<group>"; };
 		475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
+		475C8CC324EFAFE10024F108 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		475C8CC924EFD9BC0024F108 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
@@ -131,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		475C8CC824EFD9840024F108 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				475C8CC924EFD9BC0024F108 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		479FB9C924C1AFBB007F5712 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +171,7 @@
 			children = (
 				479FB9D024C98EAD007F5712 /* Category.swift */,
 				479FB9DD24C9D60B007F5712 /* Product.swift */,
+				475C8CC324EFAFE10024F108 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 		47CF32CF24B07E3300A35F61 /* FawksCompany */ = {
 			isa = PBXGroup;
 			children = (
+				475C8CC824EFD9840024F108 /* Services */,
 				479FB9C924C1AFBB007F5712 /* XIBs */,
 				47B8875B24B3330C008515CB /* Controller */,
 				47B8875C24B33318008515CB /* Storyboards */,
@@ -508,15 +525,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				479FB9CF24C987D7007F5712 /* Firebase+Utils.swift in Sources */,
+				475C8CC724EFBE8F0024F108 /* AddEditCategoryVC.swift in Sources */,
 				479FB9DB24C9D52C007F5712 /* ProductVC.swift in Sources */,
 				47CF32D524B07E3300A35F61 /* HomeVC.swift in Sources */,
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
 				47B8876224B340D7008515CB /* LoginVC.swift in Sources */,
+				475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
 				475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */,
 				47B8876424B340F4008515CB /* RegisterVC.swift in Sources */,
 				479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */,
 				47CF330224B0932C00A35F61 /* Constants.swift in Sources */,
+				475C8CC624EFBE8C0024F108 /* AddEditProductsVC.swift in Sources */,
 				475C8CBD24DCF8B20024F108 /* AdminProductVC.swift in Sources */,
 				47CF330B24B0976000A35F61 /* CustomViews.swift in Sources */,
 				47B8876624B34CFB008515CB /* Extension.swift in Sources */,
@@ -525,6 +545,7 @@
 				47BED6A224D06879001DBE48 /* ProductDetailVC.swift in Sources */,
 				479FB9D524C9982A007F5712 /* CategoryCell.swift in Sources */,
 				479FB9DE24C9D60B007F5712 /* Product.swift in Sources */,
+				475C8CC524EFBCA80024F108 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +571,7 @@
 				47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */,
 				479FB9D624C9982A007F5712 /* CategoryCell.swift in Sources */,
 				47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */,
+				475C8CC424EFAFE10024F108 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
