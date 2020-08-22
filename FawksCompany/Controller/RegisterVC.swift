@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterVC: UIViewController {
     
@@ -81,10 +82,31 @@ class RegisterVC: UIViewController {
                 return
             }
             
-            self.spinner.stopAnimating()
-            self.dismiss(animated: true, completion: nil)
+            guard let fireUser = result?.user else { return }
+            let fawksUser = User.init(id: fireUser.uid, email: email, username: username, stripeId: "")
+            // Upload document
+            self.createFirestoreUser(user: fawksUser)
         }
     
+    }
+    
+    func createFirestoreUser(user: User) {
+        // 1. Create document reference
+        let newUserRef = Firestore.firestore().collection("user").document(user.id)
+        
+        // 2. Create model data
+        let data = User.modelToData(user: user)
+        
+        // 3. Upload to firestore
+        newUserRef.setData(data) { (error) in
+            if let error = error {
+                Auth.auth().handleFireAuthError(error: error, vc: self)
+                debugPrint("Unable to upload new user document to Firestore")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.spinner.stopAnimating()
+        }
     }
     
 }

@@ -50,7 +50,12 @@
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="bar_button_cart" id="WOV-7O-l20"/>
-                            <barButtonItem image="bar_button_star" id="vMd-gm-taw"/>
+                            <barButtonItem image="bar_button_star" id="vMd-gm-taw">
+                                <connections>
+                                    <action selector="favoritesBtnTapped:" destination="BYZ-38-t0r" id="rvq-FF-hVJ"/>
+                                    <segue destination="yBa-us-Fgw" kind="show" identifier="ToFavorites" id="4cC-Ki-iEe"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -116,6 +121,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zoa-xm-vsI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bar_button_cart" width="27" height="24"/>
         <image name="bar_button_star" width="26" height="26"/>

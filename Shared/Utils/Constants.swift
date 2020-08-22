@@ -21,6 +21,8 @@ struct StoryboardId {
 struct AppImages {
     static let Correct = "correct"
     static let Wrong = "close"
+    static let FilledStar = "filled_star"
+    static let EmptyStar = "empty_star"
 }
 
 struct Identifiers {
@@ -33,6 +35,7 @@ struct Segue {
     static let ToAddEditCategory = "ToAddEditCategory"
     static let ToEditCategory = "ToEditCategory"
     static let ToAddEditProduct = "ToAddEditProduct"
+    static let ToFavorites = "ToFavorites"
 }
 
 struct AppColors {
