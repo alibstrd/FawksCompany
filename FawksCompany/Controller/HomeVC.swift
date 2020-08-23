@@ -27,7 +27,6 @@ class HomeVC: UIViewController {
         db = Firestore.firestore()
         setCollectionView()
         setupAnonymousUser()
-        setCategoriesListener()
         setupNavigationBar()
     }
     
@@ -43,6 +42,7 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.barStyle = .black
         spinner.startAnimating()
+        setCategoriesListener()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,6 +52,8 @@ class HomeVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         listener.remove()
+        categories.removeAll()
+        collectionView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -150,7 +152,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    private func setCategoriesListener() {
+    func setCategoriesListener() {
            listener = db.categoriesQuery.addSnapshotListener({ (snap, error) in
                
                if let error = error {
@@ -175,17 +177,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
            })
        }
     
-    private func onDocumentAdded(change: DocumentChange, category: Category) {
+    func onDocumentAdded(change: DocumentChange, category: Category) {
         let newIndex = Int(change.newIndex)
         categories.insert(category, at: newIndex)
         collectionView.insertItems(at: [IndexPath(item: newIndex, section: 0)])
     }
     
-    private func onDocumentModified(change: DocumentChange,category: Category) {
+    func onDocumentModified(change: DocumentChange, category: Category) {
         // item changed, but remain at the sampe position
-        if change.newIndex == change.oldIndex {
-            let index = Int(change.newIndex)
-            categories.insert(category, at: index)
+        if change.oldIndex == change.newIndex {
+            let index = Int(change.oldIndex)
+            categories[index] = category
             collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
         } else {
             // item changed, and changed position
@@ -197,7 +199,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         }
     }
     
-    private func onDocumentRemoved(change: DocumentChange, category: Category) {
+    func onDocumentRemoved(change: DocumentChange, category: Category) {
         let oldIndex = Int(change.oldIndex)
         categories.remove(at: oldIndex)
         collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])

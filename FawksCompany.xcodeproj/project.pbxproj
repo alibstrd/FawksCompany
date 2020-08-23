@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4703A2B724F2947300EFE90A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC924EFD9BC0024F108 /* UserService.swift */; };
+		4703A2B924F2C0E500EFE90A /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2B824F2C0E500EFE90A /* CheckoutVC.swift */; };
+		4703A2BC24F2C96D00EFE90A /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2BA24F2C96D00EFE90A /* CartItemCell.swift */; };
+		4703A2BD24F2C96D00EFE90A /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4703A2BB24F2C96D00EFE90A /* CartItemCell.xib */; };
 		475C8CB924D322590024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
 		475C8CBA24D3225A0024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
 		475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */; };
@@ -71,6 +75,9 @@
 
 /* Begin PBXFileReference section */
 		203647D06030EBF40E3D349F /* Pods_FawksAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FawksAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4703A2B824F2C0E500EFE90A /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
+		4703A2BA24F2C96D00EFE90A /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		4703A2BB24F2C96D00EFE90A /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
 		475C8CB824D322450024F108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductVC.swift; sourceTree = "<group>"; };
 		475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
@@ -162,6 +169,7 @@
 			children = (
 				479FB9D424C9982A007F5712 /* CategoryCell.xib */,
 				479FB9E124C9DA8F007F5712 /* ProductCell.xib */,
+				4703A2BB24F2C96D00EFE90A /* CartItemCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 				47CF32D424B07E3300A35F61 /* HomeVC.swift */,
 				47B8876324B340F4008515CB /* RegisterVC.swift */,
 				479FB9DA24C9D52C007F5712 /* ProductVC.swift */,
+				4703A2B824F2C0E500EFE90A /* CheckoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +311,7 @@
 				47CF330A24B0976000A35F61 /* CustomViews.swift */,
 				479FB9D324C9982A007F5712 /* CategoryCell.swift */,
 				479FB9E024C9DA8F007F5712 /* ProductCell.swift */,
+				4703A2BA24F2C96D00EFE90A /* CartItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +427,7 @@
 				47BED6A324D06879001DBE48 /* ProductDetailVC.xib in Resources */,
 				479FB9CD24C1AFE1007F5712 /* ForgotPasswordVC.xib in Resources */,
 				475C8CB924D322590024F108 /* Assets.xcassets in Resources */,
+				4703A2BD24F2C96D00EFE90A /* CartItemCell.xib in Resources */,
 				47CF32FF24B0900300A35F61 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +541,7 @@
 				47CF32D524B07E3300A35F61 /* HomeVC.swift in Sources */,
 				47CF32D124B07E3300A35F61 /* AppDelegate.swift in Sources */,
 				47B8876224B340D7008515CB /* LoginVC.swift in Sources */,
+				4703A2B924F2C0E500EFE90A /* CheckoutVC.swift in Sources */,
 				475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
 				475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */,
@@ -537,6 +549,7 @@
 				479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */,
 				47CF330224B0932C00A35F61 /* Constants.swift in Sources */,
 				475C8CC624EFBE8C0024F108 /* AddEditProductsVC.swift in Sources */,
+				4703A2BC24F2C96D00EFE90A /* CartItemCell.swift in Sources */,
 				475C8CBD24DCF8B20024F108 /* AdminProductVC.swift in Sources */,
 				47CF330B24B0976000A35F61 /* CustomViews.swift in Sources */,
 				47B8876624B34CFB008515CB /* Extension.swift in Sources */,
@@ -569,6 +582,7 @@
 				47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */,
 				47B8876724B34CFB008515CB /* Extension.swift in Sources */,
 				47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */,
+				4703A2B724F2947300EFE90A /* UserService.swift in Sources */,
 				479FB9D624C9982A007F5712 /* CategoryCell.swift in Sources */,
 				47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */,
 				475C8CC424EFAFE10024F108 /* User.swift in Sources */,
