@@ -21,18 +21,24 @@ class ProductVC: UIViewController, ProductCellDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
-        tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setProductListener()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         listener.remove()
+        products.removeAll()
+        tableView.reloadData()
     }
     
-    private func setProductListener() {
+    func setProductListener() {
         
         var ref: Query!
         if showFavorites {
@@ -76,14 +82,14 @@ class ProductVC: UIViewController, ProductCellDelegate {
 
 extension ProductVC: UITableViewDelegate, UITableViewDataSource {
     
-    private func onDocumentAdded(change: DocumentChange, product: Product) {
+    func onDocumentAdded(change: DocumentChange, product: Product) {
         let newIndex = Int(change.newIndex)
         products.insert(product, at: newIndex)
         tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .fade)
         //tableView.reloadData()
     }
     
-    private func onDocumentModified(change: DocumentChange, product: Product) {
+    func onDocumentModified(change: DocumentChange, product: Product) {
         // item changed. but remain at the same position
         if change.newIndex == change.oldIndex {
             let index = Int(change.newIndex)
@@ -98,7 +104,7 @@ extension ProductVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    private func onDocumentRemoved(change: DocumentChange, product: Product) {
+    func onDocumentRemoved(change: DocumentChange, product: Product) {
         let oldIndex = Int(change.oldIndex)
         products.remove(at: oldIndex)
         tableView.deleteRows(at: [IndexPath(row: oldIndex, section: 0)], with: .fade)

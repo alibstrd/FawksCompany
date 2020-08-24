@@ -31,8 +31,9 @@ class ProductDetailVC: UIViewController {
         }
         
         let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
         if let price = formatter.string(from: product.price as NSNumber) {
-            pdPriceLbl.text = "Rp. \(price)"
+            pdPriceLbl.text = price
         }
         
         // Dismiss tapping outside of product detail view
