@@ -11,13 +11,15 @@
 		4703A2B924F2C0E500EFE90A /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2B824F2C0E500EFE90A /* CheckoutVC.swift */; };
 		4703A2BC24F2C96D00EFE90A /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2BA24F2C96D00EFE90A /* CartItemCell.swift */; };
 		4703A2BD24F2C96D00EFE90A /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4703A2BB24F2C96D00EFE90A /* CartItemCell.xib */; };
+		4703A2C224F3E46800EFE90A /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2C124F3E46800EFE90A /* StripeCart.swift */; };
+		4703A2C524F4088800EFE90A /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
+		4703A2C624F40D2800EFE90A /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479FB9E124C9DA8F007F5712 /* ProductCell.xib */; };
 		475C8CB924D322590024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
 		475C8CBA24D3225A0024F108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475C8CB824D322450024F108 /* Assets.xcassets */; };
 		475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF32EE24B07EB300A35F61 /* AdminHomeVC.swift */; };
 		475C8CBD24DCF8B20024F108 /* AdminProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */; };
 		475C8CBE24DCF8B20024F108 /* AdminProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */; };
 		475C8CC024DD02580024F108 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */; };
-		475C8CC224DD675E0024F108 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330A24B0976000A35F61 /* CustomViews.swift */; };
 		475C8CC424EFAFE10024F108 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC324EFAFE10024F108 /* User.swift */; };
 		475C8CC524EFBCA80024F108 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC324EFAFE10024F108 /* User.swift */; };
 		475C8CC624EFBE8C0024F108 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */; };
@@ -47,7 +49,6 @@
 		479FB9E224C9DA8F007F5712 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9E024C9DA8F007F5712 /* ProductCell.swift */; };
 		479FB9E324C9DA8F007F5712 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9E024C9DA8F007F5712 /* ProductCell.swift */; };
 		479FB9E424C9DA8F007F5712 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479FB9E124C9DA8F007F5712 /* ProductCell.xib */; };
-		479FB9E524C9DA8F007F5712 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479FB9E124C9DA8F007F5712 /* ProductCell.xib */; };
 		47B8875924B3216A008515CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47B8875824B3216A008515CB /* GoogleService-Info.plist */; };
 		47B8876224B340D7008515CB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876124B340D7008515CB /* LoginVC.swift */; };
 		47B8876424B340F4008515CB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8876324B340F4008515CB /* RegisterVC.swift */; };
@@ -78,6 +79,7 @@
 		4703A2B824F2C0E500EFE90A /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		4703A2BA24F2C96D00EFE90A /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		4703A2BB24F2C96D00EFE90A /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
+		4703A2C124F3E46800EFE90A /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
 		475C8CB824D322450024F108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475C8CBC24DCF8B20024F108 /* AdminProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductVC.swift; sourceTree = "<group>"; };
 		475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4703A2C024F3E3CD00EFE90A /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				4703A2C124F3E46800EFE90A /* StripeCart.swift */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
 		475C8CC824EFD9840024F108 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		47CF32CF24B07E3300A35F61 /* FawksCompany */ = {
 			isa = PBXGroup;
 			children = (
+				4703A2C024F3E3CD00EFE90A /* Stripe */,
 				475C8CC824EFD9840024F108 /* Services */,
 				479FB9C924C1AFBB007F5712 /* XIBs */,
 				47B8875B24B3330C008515CB /* Controller */,
@@ -437,11 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				479FB9D824C9982A007F5712 /* CategoryCell.xib in Resources */,
+				4703A2C624F40D2800EFE90A /* ProductCell.xib in Resources */,
 				47893B0724D1A9210021BDA5 /* ProductDetailVC.xib in Resources */,
 				47B8875924B3216A008515CB /* GoogleService-Info.plist in Resources */,
 				47893B0524D1A9210021BDA5 /* ForgotPasswordVC.xib in Resources */,
 				47CF32F724B07EB900A35F61 /* LaunchScreen.storyboard in Resources */,
-				479FB9E524C9DA8F007F5712 /* ProductCell.xib in Resources */,
 				475C8CBA24D3225A0024F108 /* Assets.xcassets in Resources */,
 				47CF32F224B07EB300A35F61 /* Main.storyboard in Resources */,
 			);
@@ -555,6 +566,7 @@
 				47B8876624B34CFB008515CB /* Extension.swift in Sources */,
 				479FB9D124C98EAD007F5712 /* Category.swift in Sources */,
 				479FB9E224C9DA8F007F5712 /* ProductCell.swift in Sources */,
+				4703A2C224F3E46800EFE90A /* StripeCart.swift in Sources */,
 				47BED6A224D06879001DBE48 /* ProductDetailVC.swift in Sources */,
 				479FB9D524C9982A007F5712 /* CategoryCell.swift in Sources */,
 				479FB9DE24C9D60B007F5712 /* Product.swift in Sources */,
@@ -575,7 +587,6 @@
 				475C8CC024DD02580024F108 /* AddEditProductsVC.swift in Sources */,
 				47893B0824D1A9280021BDA5 /* HomeVC.swift in Sources */,
 				47CF32ED24B07EB300A35F61 /* SceneDelegate.swift in Sources */,
-				475C8CC224DD675E0024F108 /* CustomViews.swift in Sources */,
 				475C8CBE24DCF8B20024F108 /* AdminProductVC.swift in Sources */,
 				47893B0A24D1B3960021BDA5 /* AddEditCategoryVC.swift in Sources */,
 				479FB9E324C9DA8F007F5712 /* ProductCell.swift in Sources */,
@@ -584,6 +595,7 @@
 				47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */,
 				4703A2B724F2947300EFE90A /* UserService.swift in Sources */,
 				479FB9D624C9982A007F5712 /* CategoryCell.swift in Sources */,
+				4703A2C524F4088800EFE90A /* CustomViews.swift in Sources */,
 				47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */,
 				475C8CC424EFAFE10024F108 /* User.swift in Sources */,
 			);

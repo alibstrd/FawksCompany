@@ -8,22 +8,22 @@
 
 import UIKit
 
-class CustomButton: UIButton {
-    override func awakeFromNib() {
+public class CustomButton: UIButton {
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 5
+    }
+}
+
+public class RoundedImageView: UIImageView {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 15
     }
 }
 
-class RoundedImageView: UIImageView {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        layer.cornerRadius = 15
-    }
-}
-
-class RoundedShadowView: UIView {
-    override func awakeFromNib() {
+public class RoundedShadowView: UIView {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 5
         layer.shadowColor = AppColors.FawksColor?.cgColor
@@ -32,8 +32,8 @@ class RoundedShadowView: UIView {
     }
 }
 
-class RoundedShadowButton: UIButton {
-    override func awakeFromNib() {
+public class RoundedShadowButton: UIButton {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 15
         layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor

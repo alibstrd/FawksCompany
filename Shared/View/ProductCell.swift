@@ -42,9 +42,9 @@ class ProductCell: UITableViewCell {
             productImg.kf.setImage(with: url)
         }
         let formatter = NumberFormatter()
-        formatter.numberStyle = .none
+        formatter.numberStyle = .currency
         if let price = formatter.string(from: product.price as NSNumber) {
-            productPrice.text = "Rp. \(price)"
+            productPrice.text = price
         }
         
         if UserService.favorites.contains(product) {
