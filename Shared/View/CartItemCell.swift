@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
+
+protocol CartItemCellDelegate: class {
+    func removeItemcart(item: Product)
+}
 
 class CartItemCell: UITableViewCell {
     
@@ -15,18 +20,31 @@ class CartItemCell: UITableViewCell {
     @IBOutlet weak var productTitleLbl: UILabel!
     @IBOutlet weak var deleteItemBtn: UIButton!
     
+    weak var delegate: CartItemCellDelegate?
+    private var item: Product!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    @IBAction func deleteItemBtnTapped(_ sender: Any) {
+    func configureCell(product: Product, delegate: CartItemCellDelegate) {
+        self.item = product
+        self.delegate = delegate
         
+        if let url = URL(string: product.imgUrl) {
+            productImg.kf.setImage(with: url)
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productTitleLbl.text = "\(product.name) \(price)"
+        }
+    }
+    
+    @IBAction func deleteItemBtnTapped(_ sender: Any) {
+        delegate?.removeItemcart(item: item)
     }
     
 }

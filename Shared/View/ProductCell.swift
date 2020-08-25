@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductCellDelegate: class {
     func productFavorited(product: Product)
+    func itemToCart(product: Product)
 }
 
 class ProductCell: UITableViewCell {
@@ -25,12 +26,6 @@ class ProductCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configureCell(product: Product, delegate: ProductCellDelegate) {
@@ -61,6 +56,6 @@ class ProductCell: UITableViewCell {
     }
     
     @IBAction func addToCartBtnPressed(_ sender: CustomButton) {
-        
+        delegate?.itemToCart(product: product)
     }
 }
