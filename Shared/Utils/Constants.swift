@@ -28,6 +28,7 @@ struct AppImages {
 struct Identifiers {
     static let CategoryCell = "CategoryCell"
     static let ProductCell = "ProductCell"
+    static let CartItemCell = "CartItemCell"
 }
 
 struct Segue {

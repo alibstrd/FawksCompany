@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="501" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-78-zjq" customClass="RoundedShadowView" customModule="FawksCompany">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-78-zjq" customClass="RoundedShadowView" customModule="FawksAdmin" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="485" height="184"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-l5-IU5" customClass="RoundedImageView" customModule="FawksCompany">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-l5-IU5" customClass="RoundedImageView" customModule="FawksAdmin" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="168" height="168"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="n7e-l5-IU5" secondAttribute="height" multiplier="1:1" id="5iu-Yj-SSk"/>
@@ -51,7 +51,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSy-Jd-rWI" customClass="CustomButton" customModule="FawksCompany">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSy-Jd-rWI" customClass="CustomButton" customModule="FawksAdmin" customModuleProvider="target">
                                         <rect key="frame" x="82" y="61" width="105" height="33"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>

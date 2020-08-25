@@ -158,8 +158,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7N-Tp-9s8">
-                                                <rect key="frame" x="329" y="0.0" width="45" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -175,8 +175,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pf-Jx-0XL">
-                                                <rect key="frame" x="329" y="0.0" width="45" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -192,8 +192,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHe-jg-geL">
-                                                <rect key="frame" x="329" y="0.0" width="45" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -216,8 +216,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ber-g1-4cN">
-                                                <rect key="frame" x="329" y="0.0" width="45" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="327.5" y="0.0" width="46.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -229,15 +229,15 @@
                                 <rect key="frame" x="188.5" y="755" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gm-48-Hay">
-                                <rect key="frame" x="20" y="108" width="374" height="397"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gm-48-Hay">
+                                <rect key="frame" x="5" y="108" width="404" height="397"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="1gm-48-Hay" firstAttribute="leading" secondItem="xaY-9P-Kgc" secondAttribute="leading" constant="20" id="0ow-9y-iRi"/>
-                            <constraint firstItem="xaY-9P-Kgc" firstAttribute="trailing" secondItem="1gm-48-Hay" secondAttribute="trailing" constant="20" id="6ev-yU-hfd"/>
+                            <constraint firstItem="1gm-48-Hay" firstAttribute="leading" secondItem="xaY-9P-Kgc" secondAttribute="leading" constant="5" id="0ow-9y-iRi"/>
+                            <constraint firstItem="xaY-9P-Kgc" firstAttribute="trailing" secondItem="1gm-48-Hay" secondAttribute="trailing" constant="5" id="6ev-yU-hfd"/>
                             <constraint firstItem="xaY-9P-Kgc" firstAttribute="trailing" secondItem="KEi-at-FrT" secondAttribute="trailing" constant="20" id="8hb-IG-Vd2"/>
                             <constraint firstItem="xaY-9P-Kgc" firstAttribute="bottom" secondItem="09M-zd-GMf" secondAttribute="bottom" constant="20" id="DOG-1h-vEG"/>
                             <constraint firstItem="09M-zd-GMf" firstAttribute="leading" secondItem="xaY-9P-Kgc" secondAttribute="leading" constant="20" id="MxS-82-Lh5"/>

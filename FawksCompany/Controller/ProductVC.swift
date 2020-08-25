@@ -74,9 +74,14 @@ class ProductVC: UIViewController, ProductCellDelegate {
     
     func productFavorited(product: Product) {
         UserService.favoriteSelected(product: product)
-        guard let index = products.firstIndex(of: product) else { return }
-        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+//        guard let index = products.firstIndex(of: product) else { return }
+//        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        tableView.reloadData()
       }
+    
+    func itemToCart(product: Product) {
+        StripeCart.addItemToCart(item: product)
+    }
 
 }
 

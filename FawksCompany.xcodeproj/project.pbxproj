@@ -25,6 +25,7 @@
 		475C8CC624EFBE8C0024F108 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */; };
 		475C8CC724EFBE8F0024F108 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */; };
 		475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC924EFD9BC0024F108 /* UserService.swift */; };
+		476E67CB24F52C3E003C8CA0 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2C124F3E46800EFE90A /* StripeCart.swift */; };
 		47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
 		47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */; };
@@ -596,6 +597,7 @@
 				4703A2B724F2947300EFE90A /* UserService.swift in Sources */,
 				479FB9D624C9982A007F5712 /* CategoryCell.swift in Sources */,
 				4703A2C524F4088800EFE90A /* CustomViews.swift in Sources */,
+				476E67CB24F52C3E003C8CA0 /* StripeCart.swift in Sources */,
 				47893B0624D1A9210021BDA5 /* ProductDetailVC.swift in Sources */,
 				475C8CC424EFAFE10024F108 /* User.swift in Sources */,
 			);

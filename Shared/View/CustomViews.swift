@@ -11,7 +11,7 @@ import UIKit
 public class CustomButton: UIButton {
     public override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 5
+        layer.cornerRadius = 10
     }
 }
 
