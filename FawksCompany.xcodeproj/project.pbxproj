@@ -26,6 +26,7 @@
 		475C8CC724EFBE8F0024F108 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */; };
 		475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C8CC924EFD9BC0024F108 /* UserService.swift */; };
 		476E67CB24F52C3E003C8CA0 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4703A2C124F3E46800EFE90A /* StripeCart.swift */; };
+		476E67CD24F68CB4003C8CA0 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476E67CC24F68CB4003C8CA0 /* StripeApi.swift */; };
 		47893B0124D1A8B70021BDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CF330124B0932C00A35F61 /* Constants.swift */; };
 		47893B0224D1A8BA0021BDA5 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CE24C987D7007F5712 /* Firebase+Utils.swift */; };
 		47893B0424D1A9210021BDA5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */; };
@@ -86,6 +87,7 @@
 		475C8CBF24DD02580024F108 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		475C8CC324EFAFE10024F108 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		475C8CC924EFD9BC0024F108 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		476E67CC24F68CB4003C8CA0 /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		47893B0924D1B3960021BDA5 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		479FB9CA24C1AFE1007F5712 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		479FB9CB24C1AFE1007F5712 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				4703A2C124F3E46800EFE90A /* StripeCart.swift */,
+				476E67CC24F68CB4003C8CA0 /* StripeApi.swift */,
 			);
 			path = Stripe;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				4703A2B924F2C0E500EFE90A /* CheckoutVC.swift in Sources */,
 				475C8CCA24EFD9BC0024F108 /* UserService.swift in Sources */,
 				47CF32D324B07E3300A35F61 /* SceneDelegate.swift in Sources */,
+				476E67CD24F68CB4003C8CA0 /* StripeApi.swift in Sources */,
 				475C8CBB24D32FBF0024F108 /* AdminHomeVC.swift in Sources */,
 				47B8876424B340F4008515CB /* RegisterVC.swift in Sources */,
 				479FB9CC24C1AFE1007F5712 /* ForgotPasswordVC.swift in Sources */,
