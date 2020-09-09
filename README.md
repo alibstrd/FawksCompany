@@ -25,7 +25,17 @@ The features are :
 ***
 
 # Screencasts
+## Client
+<a href="https://imgur.com/tuVSmqr"><img width="600" height="615" src="https://i.imgur.com/uMxFVGB.png" /></a>
+<a href="https://imgur.com/vu4OCrG"><img width="600" height="615" src="https://i.imgur.com/vu4OCrG.png" /></a>
+<a href="https://imgur.com/NCWkPEk"><img width="600" height="615" src="https://i.imgur.com/NCWkPEk.png" /></a> 
+<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img width="420" height="615" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
 
+***
+
+## Admin
+<a href="https://imgur.com/GAUPQzC"><img width="600" height="615" src="https://i.imgur.com/GAUPQzC.png" /></a>
+<a href="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif"><img width="517" height="546" src="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif" /></a>
 
 
 
