@@ -26,17 +26,13 @@ The features are :
 
 # Screencasts
 ## Client
-## Client
-<a href="https://imgur.com/tuVSmqr"><img width="425" height="430" src="https://i.imgur.com/uMxFVGB.png" /></a>
-<a href="https://imgur.com/vu4OCrG"><img width="425" height="430" src="https://i.imgur.com/vu4OCrG.png" /></a>
-<a href="https://imgur.com/NCWkPEk"><img width="425" height="430" src="https://i.imgur.com/NCWkPEk.png" /></a> 
-<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img width="290" height="430" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
+<a href="https://imgur.com/tuVSmqr"><img src="https://i.imgur.com/uMxFVGB.png" /></a>
+<a href="https://imgur.com/vu4OCrG"><img src="https://i.imgur.com/vu4OCrG.png" /></a>
+<a href="https://imgur.com/NCWkPEk"><img src="https://i.imgur.com/NCWkPEk.png" /></a> 
+<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img align="center" width="580" height="860" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
 
 ***
 
 ## Admin
-<a href="https://imgur.com/GAUPQzC"><img width="425" height="430" src="https://i.imgur.com/GAUPQzC.png" /></a>
-<a href="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif"><img width="317" height="346" src="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif" /></a>
-
-
-
+<a href="https://imgur.com/GAUPQzC"><img align="left" src="https://i.imgur.com/GAUPQzC.png" /></a>
+<a href="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif"><img align="middle" width="617" height="646" src="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif" /></a>
