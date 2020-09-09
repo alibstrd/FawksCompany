@@ -26,10 +26,10 @@ The features are :
 
 # Screencasts
 ## Client
-<a href="https://imgur.com/tuVSmqr"><img width="600" height="615" src="https://i.imgur.com/uMxFVGB.png" /></a>
-<a href="https://imgur.com/vu4OCrG"><img width="600" height="615" src="https://i.imgur.com/vu4OCrG.png" /></a>
-<a href="https://imgur.com/NCWkPEk"><img width="600" height="615" src="https://i.imgur.com/NCWkPEk.png" /></a> 
-<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img width="420" height="615" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
+<a href="https://imgur.com/tuVSmqr"><img width="300" height="315" src="https://i.imgur.com/uMxFVGB.png" /></a>
+<a href="https://imgur.com/vu4OCrG"><img width="300" height="315" src="https://i.imgur.com/vu4OCrG.png" /></a>
+<a href="https://imgur.com/NCWkPEk"><img width="300" height="315" src="https://i.imgur.com/NCWkPEk.png" /></a> 
+<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img width="210" height="308" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a>  
 
 ***
 
