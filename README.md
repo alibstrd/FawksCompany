@@ -30,7 +30,7 @@ The features are :
 <a href="https://imgur.com/vu4OCrG"><img src="https://i.imgur.com/vu4OCrG.png" /></a>
 <a href="https://imgur.com/NCWkPEk"><img src="https://i.imgur.com/NCWkPEk.png" /></a> 
 <a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img align="center" width="380" height="550" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
-<a href="https://imgur.com/Vos8RJR"><img src="https://i.imgur.com/Vos8RJR.png" /></a>
+<a href="https://imgur.com/Vos8RJR"><img width="617" height="462" src="https://i.imgur.com/Vos8RJR.png" /></a>
 ***
 
 ## Admin
