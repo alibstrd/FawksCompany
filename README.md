@@ -29,10 +29,10 @@ The features are :
 <a href="https://imgur.com/tuVSmqr"><img src="https://i.imgur.com/uMxFVGB.png" /></a>
 <a href="https://imgur.com/vu4OCrG"><img src="https://i.imgur.com/vu4OCrG.png" /></a>
 <a href="https://imgur.com/NCWkPEk"><img src="https://i.imgur.com/NCWkPEk.png" /></a> 
-<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img align="center" width="580" height="860" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
-
+<a href="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif"><img align="center" width="380" height="550" src="https://media.giphy.com/media/lrba6wLrj9HNiVnaIw/giphy.gif" /></a> 
+<a href="https://imgur.com/Vos8RJR"><img src="https://i.imgur.com/Vos8RJR.png" /></a>
 ***
 
 ## Admin
-<a href="https://imgur.com/GAUPQzC"><img align="left" src="https://i.imgur.com/GAUPQzC.png" /></a>
-<a href="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif"><img align="middle" width="617" height="646" src="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif" /></a>
+<a href="https://imgur.com/GAUPQzC"><img src="https://i.imgur.com/GAUPQzC.png" /></a>
+<a href="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif"><img width="517" height="546" src="https://media.giphy.com/media/jVGtd16QJWxKEDHzp3/giphy.gif" /></a>
